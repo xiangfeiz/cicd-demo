@@ -14,7 +14,7 @@ volumes:[
   def binding1 = ["suffix":"e2e-1", "imageURL":"${imageURL}"]
   def binding2 = ["suffix":"e2e-2", "imageURL":"${imageURL}"]
   node ('cloud-native') {
-    git(url: 'https://github.com/DanielXiao/cicd-demo.git', branch: 'master', credentialsId: 'github-token', changelog: true, poll: true)
+    git(url: 'https://github.com/xiangfeiz/cicd-demo.git')
 
     stage ('Build image') {
       container('docker') {
